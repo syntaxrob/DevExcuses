@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Dev Excuses",
+  "description": "Get a quick excuse when you need it the most",
+  "version": "1.1.2",
+  "author": "Rob Penn",
+  "offline_enabled": true,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jQuery.js","content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["jQuery.js","content.js"]
+  }
+}
